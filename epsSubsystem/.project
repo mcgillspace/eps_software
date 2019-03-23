@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>epsSubsystem</name>
-	<comment />
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -28,17 +28,23 @@
 		<link>
 			<name>core</name>
 			<type>2</type>
-			<location>/home/ariolis/upsat-eps-software/ecss_services/core</location>
+			<location>C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core</location>
 		</link>
 		<link>
 			<name>eps</name>
 			<type>2</type>
-			<location>/home/ariolis/upsat-eps-software/ecss_services/platform/eps</location>
+			<location>C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps</location>
 		</link>
 		<link>
 			<name>services</name>
 			<type>2</type>
-			<location>/home/ariolis/upsat-eps-software/ecss_services/services</location>
+			<location>C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services</location>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>ecss_services</name>
+			<value>file:/C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master</value>
+		</variable>
+	</variableList>
 </projectDescription>
