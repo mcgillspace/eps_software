@@ -1,0 +1,6 @@
+15:09:49 **** Incremental Build of configuration Default for project epsSubsystem ****
+make all 
+make: *** No rule to make target 'all'.  Stop.
+
+15:09:49 Build Finished (took 208ms)
+
