@@ -2,7 +2,7 @@
 #include "upsat.h"
 #include "hldlc.h"
 #include "eps_time.h"
-#include "eps_hal.h"
+
 
 #undef __FILE_ID__
 #define __FILE_ID__ 22

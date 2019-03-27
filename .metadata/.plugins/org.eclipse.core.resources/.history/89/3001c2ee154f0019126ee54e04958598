@@ -155,7 +155,7 @@ int main(void)
 	/*kick timer interrupt for timed threads.*/
 	error_status = kick_TIM6_timed_interrupt(TIMED_EVENT_PERIOD);
 
-	EGGER_SYSVIEW_Conf();
+	SEGGER_SYSVIEW_Conf();
 	sysview_init();
 	while (1)
 	{
