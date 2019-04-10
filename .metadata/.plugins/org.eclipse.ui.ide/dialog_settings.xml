@@ -4,4 +4,11 @@
 		<item value="C:\Users\david\OneDrive\Documents\GitHub\eps_software\upsat-ecss-services-master"/>
 		<item value="C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item value="576" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="357" key="DIALOG_HEIGHT"/>
+		<item value="252" key="DIALOG_X_ORIGIN"/>
+		<item value="102" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

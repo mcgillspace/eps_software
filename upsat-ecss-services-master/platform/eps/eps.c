@@ -1,6 +1,7 @@
 #include "eps.h"
 #include "eps_state.h"
 #include "eps_time.h"
+#include "services.h"
 
 #include <stdio.h>
 #include <stdbool.h>

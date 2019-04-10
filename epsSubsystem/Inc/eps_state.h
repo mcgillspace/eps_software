@@ -9,6 +9,7 @@
 #define INC_EPS_STATE_H_
 
 #include "stm32l1xx_hal.h"
+#include "stm32l1xx_hal_gpio.h"
 #include "eps_configuration.h"
 //#include "tc74_temp_sensor.h"
 #include "eps_soft_error_handling.h"

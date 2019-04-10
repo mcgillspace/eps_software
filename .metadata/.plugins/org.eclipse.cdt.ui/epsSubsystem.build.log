@@ -1,5 +1,67 @@
-15:57:31 **** Incremental Build of configuration Debug for project epsSubsystem ****
+13:33:37 **** Build of configuration Debug for project epsSubsystem ****
 make all 
+Building file: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"services/event_reporting_service.d" -MT"services/event_reporting_service.o" -o "services/event_reporting_service.o" "C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c"
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c: In function 'event_app':
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c:19:31: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(pkt != NULL) == true) { return SATR_ERROR; }
+                               ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c:19:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(pkt != NULL) == true) { return SATR_ERROR; }
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c:23:41: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(ev_id < LAST_EV_EVENT) == true) { return SATR_ERROR; }
+                                         ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c:23:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(ev_id < LAST_EV_EVENT) == true) { return SATR_ERROR; }
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c: In function 'event_crt_pkt':
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c:89:32: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(*pkt != NULL) == true) { return SATR_ERROR; }
+                                ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c:89:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(*pkt != NULL) == true) { return SATR_ERROR; }
+Finished building: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/event_reporting_service.c
+ 
+Building file: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"services/function_management_service.d" -MT"services/function_management_service.o" -o "services/function_management_service.o" "C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c"
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c: In function 'function_management_app':
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:15:52: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(pkt != NULL && pkt->data != NULL) == true)             { return SATR_ERROR; }
+                                                    ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:15:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(pkt != NULL && pkt->data != NULL) == true)             { return SATR_ERROR; }
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:16:62: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(pkt->ser_subtype == TC_FM_PERFORM_FUNCTION) == true)   { return SATR_ERROR; }
+                                                              ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:16:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(pkt->ser_subtype == TC_FM_PERFORM_FUNCTION) == true)   { return SATR_ERROR; }
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:20:40: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(fun_id < LAST_FUN_ID) == true)             { return SATR_ERROR; }
+                                        ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:20:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(fun_id < LAST_FUN_ID) == true)             { return SATR_ERROR; }
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:21:52: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(pkt != NULL && pkt->data != NULL) == true) { return SATR_ERROR; }
+                                                    ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:21:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(pkt != NULL && pkt->data != NULL) == true) { return SATR_ERROR; }
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c: In function 'function_management_pctrl_crt_pkt_api':
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:43:32: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(*pkt != NULL) == true) {
+                                ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:43:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(*pkt != NULL) == true) {
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c: In function 'function_management_pctrl_ack_crt_pkt_api':
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:59:32: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+     if(!C_ASSERT(*pkt != NULL) == true) { return SATR_ERROR; }
+                                ^~
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c:59:8: note: add parentheses around left hand side expression to silence this warning
+     if(!C_ASSERT(*pkt != NULL) == true) { return SATR_ERROR; }
+Finished building: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/function_management_service.c
+ 
 Building file: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services/housekeeping_service.c
 Invoking: MCU GCC Compiler
 C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
@@ -245,18 +307,6 @@ Building file: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-
 Invoking: MCU GCC Compiler
 C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
 arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"eps/hal/stm32/eps_hal.d" -MT"eps/hal/stm32/eps_hal.o" -o "eps/hal/stm32/eps_hal.o" "C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c"
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c: In function 'HAL_EPS_UART_IRQHandler':
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c:146:5: warning: implicit declaration of function 'UART_EPS_Receive_IT'; did you mean 'HAL_UART_Receive_IT'? [-Wimplicit-function-declaration]
-     UART_EPS_Receive_IT(huart);
-     ^~~~~~~~~~~~~~~~~~~
-     HAL_UART_Receive_IT
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c: At top level:
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c:157:6: warning: conflicting types for 'UART_EPS_Receive_IT'
- void UART_EPS_Receive_IT(UART_HandleTypeDef *huart)
-      ^~~~~~~~~~~~~~~~~~~
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c:146:5: note: previous implicit declaration of 'UART_EPS_Receive_IT' was here
-     UART_EPS_Receive_IT(huart);
-     ^~~~~~~~~~~~~~~~~~~
 Finished building: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/hal/stm32/eps_hal.c
  
 Building file: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps/eps.c
@@ -399,17 +449,17 @@ Invoking: MCU GCC Compiler
 C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
 arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"core/pkt_pool.d" -MT"core/pkt_pool.o" -o "core/pkt_pool.o" "C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c"
 C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c: In function 'get_pkt':
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:31:36: warning: implicit declaration of function 'HAL_sys_GetTick' [-Wimplicit-function-declaration]
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:32:36: warning: implicit declaration of function 'HAL_sys_GetTick' [-Wimplicit-function-declaration]
                  pkt_pool.time[i] = HAL_sys_GetTick();
                                     ^~~~~~~~~~~~~~~
 C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c: In function 'free_pkt':
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:52:31: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:53:31: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
      if(!C_ASSERT(pkt != NULL) == true) { return SATR_ERROR; }
                                ^~
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:52:8: note: add parentheses around left hand side expression to silence this warning
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:53:8: note: add parentheses around left hand side expression to silence this warning
      if(!C_ASSERT(pkt != NULL) == true) { return SATR_ERROR; }
 C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c: In function 'is_free_pkt':
-C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c:95:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
 Finished building: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/pkt_pool.c
@@ -461,6 +511,65 @@ C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master
 C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/upsat.c:130:8: note: add parentheses around left hand side expression to silence this warning
      if(!C_ASSERT(pkt != NULL && pkt->data != NULL) == true) {
 Finished building: C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core/upsat.c
+ 
+Building file: ../SystemView/Src/SEGGER/SEGGER_RTT.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"SystemView/Src/SEGGER/SEGGER_RTT.d" -MT"SystemView/Src/SEGGER/SEGGER_RTT.o" -o "SystemView/Src/SEGGER/SEGGER_RTT.o" "../SystemView/Src/SEGGER/SEGGER_RTT.c"
+Finished building: ../SystemView/Src/SEGGER/SEGGER_RTT.c
+ 
+Building file: ../SystemView/Src/SEGGER/SEGGER_SYSVIEW.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"SystemView/Src/SEGGER/SEGGER_SYSVIEW.d" -MT"SystemView/Src/SEGGER/SEGGER_SYSVIEW.o" -o "SystemView/Src/SEGGER/SEGGER_SYSVIEW.o" "../SystemView/Src/SEGGER/SEGGER_SYSVIEW.c"
+Finished building: ../SystemView/Src/SEGGER/SEGGER_SYSVIEW.c
+ 
+Building file: ../SystemView/Src/Config/SEGGER_SYSVIEW_Config_NoOS.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"SystemView/Src/Config/SEGGER_SYSVIEW_Config_NoOS.d" -MT"SystemView/Src/Config/SEGGER_SYSVIEW_Config_NoOS.o" -o "SystemView/Src/Config/SEGGER_SYSVIEW_Config_NoOS.o" "../SystemView/Src/Config/SEGGER_SYSVIEW_Config_NoOS.c"
+Finished building: ../SystemView/Src/Config/SEGGER_SYSVIEW_Config_NoOS.c
+ 
+Building file: ../Src/eps_bootsequence.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/eps_bootsequence.d" -MT"Src/eps_bootsequence.o" -o "Src/eps_bootsequence.o" "../Src/eps_bootsequence.c"
+../Src/eps_bootsequence.c: In function 'EPS_bootseq_poweron_all_rails':
+../Src/eps_bootsequence.c:65:2: warning: implicit declaration of function 'HAL_sys_delay'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+  HAL_sys_delay(50);
+  ^~~~~~~~~~~~~
+  HAL_Delay
+Finished building: ../Src/eps_bootsequence.c
+ 
+Building file: ../Src/eps_configuration.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/eps_configuration.d" -MT"Src/eps_configuration.o" -o "Src/eps_configuration.o" "../Src/eps_configuration.c"
+Finished building: ../Src/eps_configuration.c
+ 
+Building file: ../Src/eps_debug.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/eps_debug.d" -MT"Src/eps_debug.o" -o "Src/eps_debug.o" "../Src/eps_debug.c"
+../Src/eps_debug.c: In function 'EPS_debug_uart_init':
+../Src/eps_debug.c:43:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(uart_output_buffer, "UART test ...\n");
+          ^~~~~~~~~~~~~~~~~~
+In file included from C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h:50:0,
+                 from C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h:47,
+                 from C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc/stm32l1xx_hal_conf.h:153,
+                 from C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:48,
+                 from ../Src/eps_debug.c:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+Finished building: ../Src/eps_debug.c
+ 
+Building file: ../Src/eps_non_volatile_mem_handling.c
+Invoking: MCU GCC Compiler
+C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/eps_non_volatile_mem_handling.d" -MT"Src/eps_non_volatile_mem_handling.o" -o "Src/eps_non_volatile_mem_handling.o" "../Src/eps_non_volatile_mem_handling.c"
+Finished building: ../Src/eps_non_volatile_mem_handling.c
  
 Building file: ../Src/eps_obc_wraps.c
 Invoking: MCU GCC Compiler
@@ -522,21 +631,33 @@ Building file: ../Src/main.c
 Invoking: MCU GCC Compiler
 C:\Users\david\OneDrive\Documents\GitHub\eps_software\epsSubsystem\Debug
 arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xB -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/OS" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/Config" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/SystemView/Src/SEGGER" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/core" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Include" -I"C:/Users/david/OneDrive/Documents/GitHub/eps_software/epsSubsystem/Drivers/CMSIS/Device/ST/STM32L1xx/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'main':
-../Src/main.c:158:2: warning: implicit declaration of function 'SEGGER_SYSVIEW_Conf' [-Wimplicit-function-declaration]
-  SEGGER_SYSVIEW_Conf();
-  ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:159:2: warning: implicit declaration of function 'sysview_init'; did you mean 'SystemInit'? [-Wimplicit-function-declaration]
-  sysview_init();
-  ^~~~~~~~~~~~
-  SystemInit
-../Src/main.c:167:19: warning: implicit declaration of function 'HAL_sys_GetTick'; did you mean 'HAL_GetTick'? [-Wimplicit-function-declaration]
-   uint32_t time = HAL_sys_GetTick();
-                   ^~~~~~~~~~~~~~~
-                   HAL_GetTick
-../Src/main.c:169:3: warning: implicit declaration of function 'queue_IDLE' [-Wimplicit-function-declaration]
-   queue_IDLE(OBC_APP_ID);
-   ^~~~~~~~~~
+../Src/main.c:546:6: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+ void MX_GPIO_Init(void)
+      ^~~~~~~~~~~~
+../Src/main.c:515:6: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+ void MX_DMA_Init(void)
+      ^~~~~~~~~~~
+../Src/main.c:497:6: warning: 'MX_USART3_UART_Init' defined but not used [-Wunused-function]
+ void MX_USART3_UART_Init(void)
+      ^~~~~~~~~~~~~~~~~~~
+../Src/main.c:481:6: warning: 'MX_USART1_UART_Init' defined but not used [-Wunused-function]
+ void MX_USART1_UART_Init(void)
+      ^~~~~~~~~~~~~~~~~~~
+../Src/main.c:463:6: warning: 'MX_TIM6_Init' defined but not used [-Wunused-function]
+ void MX_TIM6_Init(void)
+      ^~~~~~~~~~~~
+../Src/main.c:429:6: warning: 'MX_TIM3_Init' defined but not used [-Wunused-function]
+ void MX_TIM3_Init(void)
+      ^~~~~~~~~~~~
+../Src/main.c:418:6: warning: 'MX_IWDG_Init' defined but not used [-Wunused-function]
+ void MX_IWDG_Init(void)
+      ^~~~~~~~~~~~
+../Src/main.c:401:6: warning: 'MX_I2C2_Init' defined but not used [-Wunused-function]
+ void MX_I2C2_Init(void)
+      ^~~~~~~~~~~~
+../Src/main.c:289:6: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
+ void MX_ADC_Init(void)
+      ^~~~~~~~~~~
 Finished building: ../Src/main.c
  
 Building file: ../Src/stm32l1xx_hal_msp.c
@@ -709,8 +830,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "epsSubsystem.elf" "epsSubsystem.bin"
 arm-none-eabi-size "epsSubsystem.elf"
    text	   data	    bss	    dec	    hex	filename
-  49896	     20	   9636	  59552	   e8a0	epsSubsystem.elf
+   8092	     12	   5140	  13244	   33bc	epsSubsystem.elf
  
 
-15:58:01 Build Finished (took 30s.807ms)
+13:34:34 Build Finished (took 57s.196ms)
 
