@@ -3,6 +3,7 @@
 	<name>epsSubsystem</name>
 	<comment></comment>
 	<projects>
+		<project>upsat-ecss-services-master</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -33,18 +34,18 @@
 		<link>
 			<name>eps</name>
 			<type>2</type>
-			<location>C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/platform/eps</location>
+			<locationURI>ecss_services/platform/eps</locationURI>
 		</link>
 		<link>
 			<name>services</name>
 			<type>2</type>
-			<location>C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master/services</location>
+			<locationURI>ecss_services/services</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
 			<name>ecss_services</name>
-			<value>file:/C:/Users/david/OneDrive/Documents/GitHub/eps_software/upsat-ecss-services-master</value>
+			<value>file:/D:/Git/EPS/eps_software/upsat-ecss-services-master</value>
 		</variable>
 	</variableList>
 </projectDescription>

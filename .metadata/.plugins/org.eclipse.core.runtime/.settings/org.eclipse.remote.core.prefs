@@ -2,6 +2,6 @@ connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/__internal_
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.baudRate=11
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.byteSize=3
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.parity=0
-connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.portName=COM5
+connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.portName=COM1
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.stopBits=0
 eclipse.preferences.version=1

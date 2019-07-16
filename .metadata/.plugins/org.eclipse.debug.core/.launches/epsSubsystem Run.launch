@@ -11,28 +11,30 @@
 <stringAttribute key="fr.ac6.mcu.ide.DBG_RESET_MODE" value="connect_under_reset"/>
 <stringAttribute key="fr.ac6.mcu.ide.DBG_STOP_WATCHDOG_THEN_HALTED_ALLOWED" value="true"/>
 <booleanAttribute key="fr.ac6.mcu.ide.OPENOCD_GENERATOR_OPTION" value="false"/>
+<booleanAttribute key="fr.ac6.mcu.ide.OPENOCD_LAUNCH" value="true"/>
 <stringAttribute key="fr.ac6.mcu.ide.OPENOCD_NAME" value="&quot;${openstm32_openocd_mpu_path}\openocd.exe&quot; -d1"/>
 <stringAttribute key="fr.ac6.mcu.ide.OPENOCD_OTHER_OPTIONS" value=""/>
-<stringAttribute key="fr.ac6.mcu.ide.OPENOCD_SCRIPT" value=""/>
-<stringAttribute key="fr.ac6.mcu.ide.OPENOCD_SCRIPT_CHOICE" value="automated"/>
+<stringAttribute key="fr.ac6.mcu.ide.OPENOCD_SCRIPT" value="C:\Ac6\SystemWorkbench\OpenOCD-20190426-0.10.0\share\openocd\scripts\target\stm32l1.cfg"/>
+<stringAttribute key="fr.ac6.mcu.ide.OPENOCD_SCRIPT_CHOICE" value="provided"/>
 <stringAttribute key="fr.ac6.mcu.ide.OPENOCD_SCRIPT_IS_LEGACY" value="false"/>
-<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.connectionSelected" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.connectionSelected" value="MPU Serial"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.doHalt" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.doReset" value="false"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageFileName" value=""/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageOffset" value=""/>
-<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.inetAddrLoader" value="No IP found"/>
-<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.initCommands" value="monitor"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.initCommands" value="monitor reset &#13;&#10;monitor halt"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.ipAddress" value="localhost"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.jtagDevice" value="Generic TCP/IP"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadImage" value="true"/>
-<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadImageThruSerialDevice" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadImageThruSerialDevice" value="true"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadSymbols" value="true"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.pcRegister" value=""/>
 <intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="3333"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.runCommands" value=""/>
-<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.serialDeviceLoader" value="COM5"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.serialDeviceLoader" value="COM1"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setPcRegister" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setResume" value="true"/>
-<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setStopAt" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setStopAt" value="true"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.stopAt" value="main"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsFileName" value=""/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsOffset" value=""/>
@@ -44,14 +46,17 @@
 <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="${openstm32_compiler_path}\arm-none-eabi-gdb"/>
 <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/epsSubsystem.elf"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME_ACTIVATED" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="epsSubsystem"/>
-<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="fr.ac6.managedbuild.config.gnu.cross.exe.debug.2021812430"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/epsSubsystem"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
+<stringAttribute key="process_factory_id" value="fr.ac6.mcu.debug.launching.MCUGdbProcessFactory"/>
 </launchConfiguration>
