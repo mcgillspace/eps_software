@@ -20,26 +20,27 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.st.stm32cube.ide.mcu.MCUProjectNature</nature>
 		<nature>org.eclipse.cdt.core.cnature</nature>
-		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
-		<nature>fr.ac6.mcu.ide.core.MCUProjectNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>com.st.stm32cube.ide.mcu.MCUSW4STM32ConvertedProjectNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
 			<name>core</name>
 			<type>2</type>
-			<locationURI>ecss_services/core</locationURI>
+			<location>C:/Users/david/OneDrive/Documents/MSG/upsat-ecss-services-master/upsat-ecss-services-master/core</location>
 		</link>
 		<link>
 			<name>eps</name>
 			<type>2</type>
-			<locationURI>ecss_services/platform/eps</locationURI>
+			<location>C:/Users/david/OneDrive/Documents/MSG/upsat-ecss-services-master/upsat-ecss-services-master/platform/eps</location>
 		</link>
 		<link>
 			<name>services</name>
 			<type>2</type>
-			<locationURI>ecss_services/services</locationURI>
+			<location>C:/Users/david/OneDrive/Documents/MSG/upsat-ecss-services-master/upsat-ecss-services-master/services</location>
 		</link>
 	</linkedResources>
 	<variableList>

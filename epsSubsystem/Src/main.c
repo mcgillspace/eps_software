@@ -95,152 +95,152 @@ int main(void)
 	/* MCU Configuration----------------------------------------------------------*/
 
 	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-//	HAL_Init();
+	HAL_Init();
 
-	/* Configure the system clock */
-//	SystemClock_Config();
-//
-//	/* Initialize all configured peripherals */
-//	MX_GPIO_Init();
-//	MX_DMA_Init();
-//	MX_ADC_Init();
-//	MX_TIM3_Init();
-//	MX_I2C2_Init();
-//	MX_USART1_UART_Init();
-//	MX_USART3_UART_Init();
-//	MX_TIM6_Init();
-//	MX_IWDG_Init();
-//
-//	/* USER CODE BEGIN 2 */
-//	/*this is used only once to arm the satellite - this should by no means stay in the code.*/
-//	//EPS_set_flash_memory_initial_values();
-//
-//	/*start watchdog*/
-//	HAL_IWDG_Start(&hiwdg);
-//
-//
-//
-//
-//
-//	/*This will be powered up in get_battery_pack_measurement - good to reset tc74 when reseting the whole system*/
-//	EPS_set_rail_switch(TEMP_SENSOR, EPS_SWITCH_RAIL_OFF, &eps_board_state);
-//
-//	/*umbilical check */
-//	error_status = EPS_bootseq_umbilical_check(&eps_board_state);
-//
-//	/*power up all rails */
-//	error_status = EPS_bootseq_poweron_all_rails(&eps_board_state);
-//
-//	/*obc communication initialization*/
-//	error_status = EPS_obc_communication_init();
-//
-//	/* USER CODE END 2 */
-//
-//	/* Infinite loop */
-//	/* USER CODE BEGIN WHILE */
-//
-//	/*load eps limits from memory*/
-//	EPS_safety_limits eps_limits;
-//	error_status = EPS_load_safety_limits_from_memory(&eps_limits);
-//
-//	/* start normal operation mode */
-//
-//	/*explicitly turn off the battery heater element*/
-//	EPS_set_control_switch(BATTERY_HEATERS, EPS_SWITCH_CONTROL_OFF, &eps_board_state);
-//
-//	/* initialize eps module state. */
-//	error_status = EPS_state_init(&eps_board_state);
-//
-//	/* initialize all power modules */
-//	error_status = EPS_PowerModule_init_ALL(&power_module_top, &power_module_bottom, &power_module_left, &power_module_right);
-//
-//	/*start main loop watchdog*/
-//	IWDG_change_reset_time(&hiwdg, IWDG_PRESCALER_4, 1900);/*205.409msec*/
-//
-//	/*kick timer interrupt for timed threads.*/
-//	error_status = kick_TIM6_timed_interrupt(TIMED_EVENT_PERIOD);
-//
-//	SEGGER_SYSVIEW_Conf();
-//	sysview_init();
-//	while (1)
-//	{
-//		/* USER CODE END WHILE */
-//
-//		/* USER CODE BEGIN 3 */
-//
-//		error_status = EPS_SOFT_ERROR_WHILE_LOOP_TOP;
-//		uint32_t time = HAL_sys_GetTick();
-//		pkt_pool_IDLE(time);
-//		queue_IDLE(OBC_APP_ID);
-//
-//		/*service timed thread every TIMED_EVENT_PERIOD microseconds*/
-//		if(EPS_event_period_status==TIMED_EVENT_NOT_SERVICED){
-//
-//			/*mppt update for all power modules*/
-//
-//			/*top power module */
-//			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_TOP;
-//			EPS_update_power_module_state(&power_module_top);
-//			EPS_PowerModule_mppt_update_pwm(&power_module_top);
-//			EPS_PowerModule_mppt_apply_pwm(&power_module_top);
-//			/*bottom power module */
-//			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_BOTTOM;
-//			EPS_update_power_module_state(&power_module_bottom);
-//			EPS_PowerModule_mppt_update_pwm(&power_module_bottom);
-//			EPS_PowerModule_mppt_apply_pwm(&power_module_bottom);
-//			/*left power module */
-//			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_LEFT;
-//			EPS_update_power_module_state(&power_module_left);
-//			EPS_PowerModule_mppt_update_pwm(&power_module_left);
-//			EPS_PowerModule_mppt_apply_pwm(&power_module_left);
-//			/*right power module */
-//			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_RIGHT;
-//			EPS_update_power_module_state(&power_module_right);
-//			EPS_PowerModule_mppt_update_pwm(&power_module_right);
-//			EPS_PowerModule_mppt_apply_pwm(&power_module_right);
-//
-//			error_status = EPS_SOFT_ERROR_OK;
-//
-//			/*eps state update*/
-//			error_status = EPS_update_state( &eps_board_state, &hadc, &hi2c2);
-//
-//			/*check for limit safety issues */
-//			error_status = EPS_perform_safety_checks(&eps_board_state, &eps_limits);
-//
-//			/*reset event period status so as to be set into the timer interrupt after TIMED_EVENT_PERIOD msec.*/
-//			EPS_event_period_status = TIMED_EVENT_SERVICED;
-//			/* resfresh watchdog*/
-//			HAL_IWDG_Refresh(&hiwdg);
-//
-//			error_status = EPS_SOFT_ERROR_TIMED_EVENT_END;
-//
-//		}
-//
-//		/* handle OBC packets */
-//		error_status = EPS_obc_communication_service();
-//
-//
-//		/*if obc uart tx is not busy, put cpu to sleep WFI */
-//		HAL_UART_StateTypeDef obc_communication_uart_status = HAL_UART_GetState(&huart3);
-//		if (!((obc_communication_uart_status == HAL_UART_STATE_BUSY)
-//				|| (obc_communication_uart_status == HAL_UART_STATE_BUSY_TX)
-//				|| (obc_communication_uart_status == HAL_UART_STATE_BUSY_TX_RX))) {
-//
-//			error_status = EPS_SOFT_ERROR_READY_TO_SLEEP;
-//			/*kill systick and sleep with WaitForInterupt with timer + UART peripherals on*/
-//			HAL_SuspendTick();
-//			/* Enter Sleep Mode , wake up is done once Key push button is pressed */
-//			HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-//			/* Resume Tick interrupt if disabled prior to sleep mode entry*/
-//			HAL_ResumeTick();
-//			error_status = EPS_SOFT_ERROR_AWAKE_FROM_SLEEP;
-//		}
-//
-//
-//
-//	}
-//	/* USER CODE END 3 */
-//
+//	 Configure the system clock
+	SystemClock_Config();
+
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
+	MX_DMA_Init();
+	MX_ADC_Init();
+	MX_TIM3_Init();
+	MX_I2C2_Init();
+	MX_USART1_UART_Init();
+	MX_USART3_UART_Init();
+	MX_TIM6_Init();
+	MX_IWDG_Init();
+
+	/* USER CODE BEGIN 2 */
+	/*this is used only once to arm the satellite - this should by no means stay in the code.*/
+	//EPS_set_flash_memory_initial_values();
+
+	/*start watchdog*/
+	HAL_IWDG_Start(&hiwdg);
+
+
+
+
+
+	/*This will be powered up in get_battery_pack_measurement - good to reset tc74 when reseting the whole system*/
+	EPS_set_rail_switch(TEMP_SENSOR, EPS_SWITCH_RAIL_OFF, &eps_board_state);
+
+	/*umbilical check */
+	error_status = EPS_bootseq_umbilical_check(&eps_board_state);
+
+	/*power up all rails */
+	error_status = EPS_bootseq_poweron_all_rails(&eps_board_state);
+
+	/*obc communication initialization*/
+	error_status = EPS_obc_communication_init();
+
+	/* USER CODE END 2 */
+
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
+
+	/*load eps limits from memory*/
+	EPS_safety_limits eps_limits;
+	error_status = EPS_load_safety_limits_from_memory(&eps_limits);
+
+	/* start normal operation mode */
+
+	/*explicitly turn off the battery heater element*/
+	EPS_set_control_switch(BATTERY_HEATERS, EPS_SWITCH_CONTROL_OFF, &eps_board_state);
+
+	/* initialize eps module state. */
+	error_status = EPS_state_init(&eps_board_state);
+
+	/* initialize all power modules */
+	error_status = EPS_PowerModule_init_ALL(&power_module_top, &power_module_bottom, &power_module_left, &power_module_right);
+
+	/*start main loop watchdog*/
+	IWDG_change_reset_time(&hiwdg, IWDG_PRESCALER_4, 1900);/*205.409msec*/
+
+	/*kick timer interrupt for timed threads.*/
+	error_status = kick_TIM6_timed_interrupt(TIMED_EVENT_PERIOD);
+
+	SEGGER_SYSVIEW_Conf();
+	sysview_init();
+	while (1)
+	{
+		/* USER CODE END WHILE */
+
+		/* USER CODE BEGIN 3 */
+
+		error_status = EPS_SOFT_ERROR_WHILE_LOOP_TOP;
+		uint32_t time = HAL_sys_GetTick();
+		pkt_pool_IDLE(time);
+		queue_IDLE(OBC_APP_ID);
+
+		/*service timed thread every TIMED_EVENT_PERIOD microseconds*/
+		if(EPS_event_period_status==TIMED_EVENT_NOT_SERVICED){
+
+			/*mppt update for all power modules*/
+
+			/*top power module */
+			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_TOP;
+			EPS_update_power_module_state(&power_module_top);
+			EPS_PowerModule_mppt_update_pwm(&power_module_top);
+			EPS_PowerModule_mppt_apply_pwm(&power_module_top);
+			/*bottom power module */
+			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_BOTTOM;
+			EPS_update_power_module_state(&power_module_bottom);
+			EPS_PowerModule_mppt_update_pwm(&power_module_bottom);
+			EPS_PowerModule_mppt_apply_pwm(&power_module_bottom);
+			/*left power module */
+			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_LEFT;
+			EPS_update_power_module_state(&power_module_left);
+			EPS_PowerModule_mppt_update_pwm(&power_module_left);
+			EPS_PowerModule_mppt_apply_pwm(&power_module_left);
+			/*right power module */
+			error_status = EPS_SOFT_ERROR_MPPT_UPDATE_RIGHT;
+			EPS_update_power_module_state(&power_module_right);
+			EPS_PowerModule_mppt_update_pwm(&power_module_right);
+			EPS_PowerModule_mppt_apply_pwm(&power_module_right);
+
+			error_status = EPS_SOFT_ERROR_OK;
+
+			/*eps state update*/
+			error_status = EPS_update_state( &eps_board_state, &hadc, &hi2c2);
+
+			/*check for limit safety issues */
+			error_status = EPS_perform_safety_checks(&eps_board_state, &eps_limits);
+
+			/*reset event period status so as to be set into the timer interrupt after TIMED_EVENT_PERIOD msec.*/
+			EPS_event_period_status = TIMED_EVENT_SERVICED;
+			/* resfresh watchdog*/
+			HAL_IWDG_Refresh(&hiwdg);
+
+			error_status = EPS_SOFT_ERROR_TIMED_EVENT_END;
+
+		}
+
+		/* handle OBC packets */
+		error_status = EPS_obc_communication_service();
+
+
+		/*if obc uart tx is not busy, put cpu to sleep WFI */
+		HAL_UART_StateTypeDef obc_communication_uart_status = HAL_UART_GetState(&huart3);
+		if (!((obc_communication_uart_status == HAL_UART_STATE_BUSY)
+				|| (obc_communication_uart_status == HAL_UART_STATE_BUSY_TX)
+				|| (obc_communication_uart_status == HAL_UART_STATE_BUSY_TX_RX))) {
+
+			error_status = EPS_SOFT_ERROR_READY_TO_SLEEP;
+			/*kill systick and sleep with WaitForInterupt with timer + UART peripherals on*/
+			HAL_SuspendTick();
+			/* Enter Sleep Mode , wake up is done once Key push button is pressed */
+			HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+			/* Resume Tick interrupt if disabled prior to sleep mode entry*/
+			HAL_ResumeTick();
+			error_status = EPS_SOFT_ERROR_AWAKE_FROM_SLEEP;
+		}
+
+
+
+	}
+	/* USER CODE END 3 */
+
 
 
 
